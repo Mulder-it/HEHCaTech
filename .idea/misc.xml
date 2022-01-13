@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/demul/AndroidStudioProjects/HEHCaTech/app/src/main/res/layout/activity_comprimes.xml" value="0.1875" />
         <entry key="..\:/Users/demul/AndroidStudioProjects/HEHCaTech/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/demul/AndroidStudioProjects/HEHCaTech/app/src/main/res/layout/activity_register.xml" value="0.1875" />
+        <entry key="..\:/Users/demul/AndroidStudioProjects/HEHCaTech/app/src/main/res/layout/activity_regulation.xml" value="0.1875" />
+        <entry key="..\:/Users/demul/AndroidStudioProjects/HEHCaTech/app/src/main/res/layout/activity_right_list.xml" value="0.1734375" />
+        <entry key="..\:/Users/demul/AndroidStudioProjects/HEHCaTech/app/src/main/res/layout/activity_s7_connexion.xml" value="0.1875" />
+        <entry key="..\:/Users/demul/AndroidStudioProjects/HEHCaTech/app/src/main/res/layout/activity_user_list.xml" value="0.1734375" />
+        <entry key="..\:/Users/demul/AndroidStudioProjects/HEHCaTech/app/src/main/res/layout/lv_right_layout.xml" value="0.1734375" />
       </map>
     </option>
   </component>

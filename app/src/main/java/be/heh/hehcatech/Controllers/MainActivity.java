@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 import java.util.ArrayList;
 
+import be.heh.hehcatech.DB.User;
+import be.heh.hehcatech.DB.UserAccessDB;
 import be.heh.hehcatech.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,11 +42,46 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onMainClickManager(View v){
+    public void onMainClickManager(View v) {
         switch (v.getId()) {
             case R.id.bt_main_login:
 
                 boolean connexion=false;
+                UserAccessDB userDB = new UserAccessDB(this);
+                userDB.openForRead();
+                ArrayList<User> tab_user = userDB.getAllUser();
+
+                EditText et_main_login=(EditText)findViewById(R.id.et_main_login);
+                String sLogin = et_main_login.getText().toString();
+
+                EditText password=(EditText)findViewById(R.id.et_main_password);
+                String sPassword = password.getText().toString();
+
+                for(User u : tab_user){
+                    if(u.getEmail().equals(sLogin) && u.getPassword().equals(sPassword)){
+                        connexion=true;
+                        ctx.setIdLoginConnected(u.getId());
+                        ctx.setUserRole(u.getRole());
+                        break;
+                    }
+                }
+                if(connexion==true){
+                    Toast.makeText(this, "Connexion réussie", Toast.LENGTH_LONG).show();
+
+                    Intent intentMain = new Intent(this, S7ConnexionActivity.class);
+                    startActivity(intentMain);
+                }
+                else{
+                    Toast.makeText(this, "Connexion ratée", Toast.LENGTH_LONG).show();
+                }
+                break;
+
+
+            case R.id.bt_main_register:
+                Intent intentUser = new Intent(this, RegisterActivity.class);
+                startActivity(intentUser);
+                break;
+
         }
     }
 }

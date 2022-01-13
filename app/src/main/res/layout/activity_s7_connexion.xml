@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controllers.S7ConnexionActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Choix de l'A.P.I."
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/et_Ip"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="Adresse IP"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/et_Rack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Rack"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/et_Slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Slot"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_Comprime"
+        android:onClick="onMainClickManager"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="COMPRIME"/>
+
+    <Button
+        android:id="@+id/bt_Regulateur"
+        android:onClick="onMainClickManager"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="REGULATEUR"/>
+
+    <Button
+        android:id="@+id/Bt_data_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestion utilisateurs"
+        android:visibility="gone"
+        android:layout_marginTop="100dp"
+        android:onClick="onMainClickManager"/>
+
+</LinearLayout>
